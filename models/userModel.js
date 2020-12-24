@@ -40,6 +40,8 @@ const userSchema = new mongoose.Schema(
     },
     contactNumber: { type: String },
     profilePicture: { type: String },
+    passwordResetToken: { type: String },
+    passwordResetExpires: { type: Date },
   },
   { timestamps: true }
 );

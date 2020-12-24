@@ -16,11 +16,12 @@ app.use(morgan('dev'));
 
 app.use('/api/users', userRoutes);
 app.use('/api/admin', adminRoutes);
-app.use('/api/category', categoryRoutes);
+app.use('/api/categories', categoryRoutes);
 
 app.use((req, res, next) => {
   let error = new Error('Not found!');
   error.status = 404;
+
   next(error);
 });
 
